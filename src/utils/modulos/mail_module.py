@@ -1,7 +1,7 @@
 import smtplib
 from email.message import EmailMessage
 
-sender_mail = "****"
+sender_mail = "***"
 password = "***"
 
 def send_simple (subject : str, body : str):

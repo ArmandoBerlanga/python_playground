@@ -5,7 +5,6 @@ conexion = mysqlc.connect(host = "localhost",
                       passwd = "",
                       database = "pruebas_ibd")
 
-
 try:
     cursor = conexion.cursor()
 

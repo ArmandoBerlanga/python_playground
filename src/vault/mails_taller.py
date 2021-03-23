@@ -3,8 +3,8 @@ from os.path import dirname, abspath
 dir = dirname(dirname(abspath(__file__)))
 sys.path.append(dir)
 
-from utils.mail_module import send_complex
-from utils.excel_module import leer_excel
+from utils.modulos.mail_module import send_complex
+from utils.modulos.excel_module import leer_excel
 
 def format_name (name : str): # recibe un nombre de n lugares y solo usa el primer nombre 
     firstname = name.split(" ")[0]
@@ -32,4 +32,4 @@ def mandar_mails ():
         send_complex(mail_receiver, subject, body, True, files)
 
 if __name__ == '__main__':
-    mandar_mails()
+    send_complex("Jose.berlangam@udem.edu", "Hola", "Ejemplo de body", False, None)
