@@ -1,8 +1,14 @@
 import smtplib
+import json
 from email.message import EmailMessage
 
-sender_mail = "***"
-password = "***"
+path_to_json = "src/keychain.json"
+
+with open(path_to_json, "r") as handler:
+    info = json.load(handler)
+
+sender_mail = info["udem_user"]
+password = info["udem_pw"]
 
 def send_simple (subject : str, body : str):
     with smtplib.SMTP ("smtp.gmail.com", 587) as smtp:
