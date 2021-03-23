@@ -4,7 +4,6 @@ def crear_excel (data : dict, file_name : str):
     df = pd.DataFrame(data, columns = data.keys())
     df.to_excel(file_name + ".xlsx", sheet_name = "Hoja 1")
 
-
 def leer_excel (file_name : str, keys):
     df = pd.read_excel(file_name + ".xlsx")
 
@@ -21,4 +20,3 @@ if __name__ == '__main__':
 
     for name in df["Nombre"]:
         print (name)
-
