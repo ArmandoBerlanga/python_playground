@@ -1,10 +1,3 @@
-import sys
-from os.path import dirname, abspath
-dir = dirname(dirname(abspath(__file__)))
-sys.path.append(dir)
-
-from utils.modulos.db_module import ConexionBD
-
 class Persona:
     
     def __init__(self, id : int, nombre : str, apellido_paterno: str, apellido_materno : str, edad : int):
@@ -45,7 +38,7 @@ class Persona:
         return self.__edad
 
     def __str__(self):
-        return f"{self.__nombre} {self.__apellido_paterno} {self.__apellido_materno} [{self.__edad} años]"
+        return f"[id {self.__id}] {self.__nombre} {self.__apellido_paterno} {self.__apellido_materno} [{self.__edad} años]"
 
 
 if __name__ == '__main__':
